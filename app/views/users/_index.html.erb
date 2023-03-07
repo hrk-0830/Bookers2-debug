@@ -23,6 +23,7 @@
               <%= link_to user_relationships_path(user.id), method: :post do %>
                 <button class ="btn btn-primary">フォロー</button>
               <% end %>
+            <% end %>
           <% end %>
         </td>
         <td><%= link_to 'Show', user, class: "user_#{user.id}" %></td>
