@@ -1,0 +1,28 @@
+<div class ="container">
+  <div class ="row">
+    <% if @range =="User"%>
+      <h2>Users serch for "<%= @serch %>"</h2>
+      <table>
+        <% @users.each do |user| %>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+            <th colspan="3"></th>
+          </tr>
+        <% end %>
+      </table>
+    <% else %>
+      <h2>Books serch for "<%= @serch %>"</h2>
+      <table>
+        <% @books.each do |user| %>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Opinion</th>
+            <th colspan="3"></th>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+  </div>
+</div>
