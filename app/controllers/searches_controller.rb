@@ -6,9 +6,11 @@ class SearchesController < ApplicationController
 
     if @range == "User"
       @users = User.looks(params[:search], params[:word])
+      @word = params[:word]
       @search = params[:search]
     else
       @books = Book.looks(params[:search], params[:word])
+      @word = params[:word]
       @search = params[:search]
     end
     render :index
