@@ -2,7 +2,9 @@
   <div class ="row">
       <% if @range =="User"%>
         <h2>Users serch for "<%= @word %>"</h2>
-        <%= render 'users/index', users: @users %>
+        <div class="favorite-btn">
+          <%= render 'users/index', users: @users %>
+        </div>
       <% else %>
         <h2>Books serch for "<%= @word %>"</h2>
         <%= render 'books/index', books: @books %>
